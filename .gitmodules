@@ -1,3 +1,6 @@
 [submodule "yolov5"]
 	path = yolov5
 	url = https://github.com/sakshigupta3796/yolov5
+[submodule "transformers"]
+	path = transformers
+	url = https://github.com/huggingface/transformers

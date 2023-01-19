@@ -20,13 +20,12 @@ from keras.models import Model
 
 
 from scipy import spatial
-%pylab inline
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from skimage.metrics import structural_similarity
 import cv2
 
-!pip install -q git+https://github.com/huggingface/transformers.git datasets
+# !pip install -q git+https://github.com/huggingface/transformers.git datasets
 from transformers import ImageGPTFeatureExtractor, ImageGPTModel
 
 

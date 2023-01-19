@@ -20,22 +20,21 @@ from keras.models import Model
 
 
 from scipy import spatial
-%pylab inline
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from skimage.metrics import structural_similarity
 import cv2
 
-!pip install -q git+https://github.com/huggingface/transformers.git datasets
+# !pip install -q git+https://github.com/huggingface/transformers.git datasets
 from transformers import ImageGPTFeatureExtractor, ImageGPTModel
 
-!pip install imagehash
+# !pip install imagehash
 import imagehash
 
 import torchvision
 from torchvision.io import read_image
 from torchvision.utils import draw_bounding_boxes
-import functions as f
+import feature_extractor as fe 
 
 def filter_images(path,t):
   # read text file into pandas DataFrame
@@ -72,9 +71,9 @@ def call_gpt_vgg(path,file_ls,feature_extractor_GPT,model_GPT,device,model_VGG):
       for file in files:
           if (file.name.endswith('.jpg')) and (file.name in file_ls):
               image = Image.open(path+file.name)
-              feat_GPT=f.extract_features_GPT(image,feature_extractor_GPT,model_GPT,device)
+              feat_GPT=fe.extract_features_GPT(image,feature_extractor_GPT,model_GPT,device)
               data_GPT[file.name]=feat_GPT.tolist()
-              feat_VGG = f.extract_features_VGG16(path+file.name,model_VGG)
+              feat_VGG = fe.extract_features_VGG16(path+file.name,model_VGG)
               data_VGG[file.name] = feat_VGG
           
   print("feature extraction completed")
@@ -139,22 +138,27 @@ def plot_clusters(clusters,image_path):
         imgplot = plt.imshow(img)
         plt.show()
 
-def images_after_clustering(img_path,data,groups):
+def images_after_clustering(img_path,image_org, data,groups):
   # bounding box in (xmin, ymin, xmax, ymax) format
   # top-left point=(xmin, ymin), bottom-right point = (xmax, ymax)
   for key in groups.keys():
+    print("cluster:", key)
     color = (np.random.randint(0,255), np.random.randint(0,255), np.random.randint(0,255))
     for img22 in groups[key]:
-      x1 = data[data["img_name"]==img22]['x1'].values[0]
-      y1= data[data["img_name"]==img22]['y1'].values[0]
-      x2 = data[data["img_name"]==img22]['x2'].values[0]
-      y2 = data[data["img_name"]==img22]['y2'].values[0]
+      print("img22", img22[0])
+      x1 = data[data["img_name"]==img22[0]]['x1'].values[0]
+      y1= data[data["img_name"]==img22[0]]['y1'].values[0]
+      x2 = data[data["img_name"]==img22[0]]['x2'].values[0]
+      y2 = data[data["img_name"]==img22[0]]['y2'].values[0]
       bbox = [int(x1), int(y1), int(x2), int(y2)]
       bbox = torch.tensor(bbox, dtype=torch.int)
       bbox = bbox.unsqueeze(0)
       # draw bounding box on the input image
-      img=draw_bounding_boxes(img, bbox, width=10, colors=color)
+      image_org =draw_bounding_boxes(image_org, bbox, width=10, colors=color)
 
   # transform it to PIL image and display
-  img = torchvision.transforms.ToPILImage()(img)
-  return img
+  image_org = torchvision.transforms.ToPILImage()(image_org)
+  return image_org
+
+
+  model_name()

@@ -145,6 +145,7 @@ def images_after_clustering(img_path,image_org, data,groups):
     print("cluster:", key)
     color = (np.random.randint(0,255), np.random.randint(0,255), np.random.randint(0,255))
     for img22 in groups[key]:
+      print("inside:")
       print("img22", img22[0])
       x1 = data[data["img_name"]==img22[0]]['x1'].values[0]
       y1= data[data["img_name"]==img22[0]]['y1'].values[0]

@@ -25,21 +25,15 @@ import detect as d
 
 def detect_object(img_name):
 
-
-
     image_path="../image/" + img_name
     weights="best.pt"
 
-    crnt_drctr = os.getcwd()
-
-    
-
     def object_detection( image_path, weights):
         d.run(source= image_path, weights=weights, save_txt=True, save_crop=True,save_conf=True )    
-
-    # shutil.rmtree( crnt_drctr + '/../yolov5/runs/detect')
-    # object_detection(image_path,weights)
-    # os.mkdir(crnt_drctr + '/../yolov5/runs/detect/exp/crops/filter_o/')
+    crnt_drctr = os.getcwd()
+    # shutil.rmtree(crnt_drctr + '../yolov5/runs/detect')
+    object_detection(image_path,weights)
+    os.mkdir(crnt_drctr + '/../yolov5/runs/detect/exp/crops/filter_o/')
 
     df_org=f.filter_images("../yolov5/runs/detect/exp/labels/"+img_name.split('.')[0]+".txt",0.8)
     print(df_org.shape)

@@ -44,7 +44,7 @@ def filter_images(path,t):
   return df
 
 def filter_cropped(path,path_filter,file_ls):
-  os.chdir(path)
+  # os.chdir(path)
   data_GPT= {}
   data_VGG={}
   Filter_list=[ImageFilter.DETAIL,ImageFilter.CONTOUR,ImageFilter.EDGE_ENHANCE,ImageFilter.SHARPEN]
@@ -62,7 +62,7 @@ def filter_cropped(path,path_filter,file_ls):
               image.save(path_filter+file.name)
 
 def call_gpt_vgg(path,file_ls,feature_extractor_GPT,model_GPT,device,model_VGG):
-  os.chdir(path)
+  # os.chdir(path)
   data_GPT= {}
   data_VGG={}
   # creates a ScandirIterator aliased as files

@@ -162,4 +162,5 @@ def images_after_clustering(img_path,image_org, data,groups):
   return image_org
 
 
-  model_name()
+  # model_name()
+  

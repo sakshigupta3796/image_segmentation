@@ -35,8 +35,10 @@ def detect_object(img_name):
     object_detection(image_path,weights)
     os.mkdir(crnt_drctr + '/../yolov5/runs/detect/exp/crops/filter_o/')
 
-    df_org=f.filter_images("../yolov5/runs/detect/exp/labels/"+img_name.split('.')[0]+".txt",0.8)
+    df_org=f.filter_images("../yolov5/runs/detect/exp/labels/"+img_name.split('.')[0]+".txt",0.7)
     print(df_org.shape)
+    # df_org = df_org.head(5)
+    # print(df_org.shape)
     file_ls_org=df_org['file_path'].apply(lambda x:x.split('/')[-1]).to_list()
 
     
@@ -74,5 +76,5 @@ def detect_object(img_name):
     img=f.images_after_clustering(image_path, image_org, df_org, clusters)
     img.save(crnt_drctr + '/../image/' + "clustered_" + img_name)
 
-    return img
+    return img, clusters, img_name
 

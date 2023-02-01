@@ -6,6 +6,7 @@ Objective: Aim of this Application is to detect SKU(store keeping unit) on a giv
 
 # Architectural Flow
 
+<img width="834" alt="flow2" src="https://user-images.githubusercontent.com/74641501/215983049-39fbdb35-5c5e-4796-b713-f779570860bf.PNG">
 
 
 1. Object Detection: In this application user needs to upload an Image that will pass through object detection model that is trained on SKU dataset using YOLOV5. Detected objects/products will be stored for next step(Feature Extraction) with their confidence level and co-ordinates in the image.

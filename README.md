@@ -32,6 +32,12 @@ Objective: Aim of this Application is to detect SKU(store keeping unit) on a giv
 # Final Implementation
 
 # Input and Clustured Image
+   * Input Image
+   ![test_1001](https://user-images.githubusercontent.com/74641501/216232867-0cc57d00-ab77-47cb-8669-e977a0c40731.jpg)
+   * Clustered Image
+   <img width="577" alt="clustered_img" src="https://user-images.githubusercontent.com/74641501/216233035-a478b5f7-0966-4c9a-8420-3369ef73110f.PNG">
+
+
 
 # Limitation
 

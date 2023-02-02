@@ -40,8 +40,11 @@ Objective: Aim of this Application is to detect SKU(store keeping unit) on a giv
 
 
 # Limitation
+   * Application performance depends on the quality of the input image.
+   * Application had hard time in distingues to same colour product.
 
 # Future Scope
-
+   * There are some rooms for the improvement in the performance of this capabilities.
+   * Need to try different Image GPT version and observer which version gives best result on our problem.
 
 #

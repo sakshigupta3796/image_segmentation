@@ -28,7 +28,8 @@
     
     * **IMAGE GPT:** Please refer this link for details: https://openai.com/blog/image-gpt/
     * **IMAGE HASHING:** This algorithm generally used to find how similar two images are using hashing concept. Please refer this link for details : https://lvngd.com/blog/determining-how-similar-two-images-are-python-perceptual-hashing/
-    * **STRUCTURAL SIMILARITY:** Please refer this link: https://medium.com/srm-mic/all-about-structural-similarity-index-ssim-theory-code-in-pytorch-6551b455541e
+    * **STRUCTURAL SIMILARITY:** Please refer this link: https://medium.com/srm-mic/all-about-structural-similarity-index-ssim-theory-code-in-pytorch-6551b455541e 
+    * **Template Matching:** Please refer this link details : https://docs.opencv.org/4.x/d4/dc6/tutorial_py_template_matching.html 
 3. **Clustering:** Applied multiple Clustering algorithms:
     * **K-MEAN CLUSTERING:** K-means clustering is one of the simplest and popular unsupervised machine learning algorithms. Please refer this link for more details : https://www.javatpoint.com/k-means-clustering-algorithm-in-machine-learning 
     * **DBSCAN:** Clustering analysis or simply Clustering is basically an Unsupervised learning method that divides the data points into a number of specific batches or groups, such that the data points in the same groups have similar properties and data points in different groups have different properties in some sense. It comprises many different methods based on differential evolution. 
@@ -58,9 +59,9 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
    </table>
       
 # Steps Involved 
-
+<p align="center">
 <img width="771" alt="steps11" src="https://user-images.githubusercontent.com/74641501/216269200-06e3bf3b-13e1-4e09-a58b-dfbb69361378.PNG">
-
+</p>
 
 # Application Demo
 

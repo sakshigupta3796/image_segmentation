@@ -40,22 +40,55 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
 
   <table>
         <tr>
-         <td> <style="font-size:30px"><b>Image Types</b></td>
-         <td> <style="font-size:30px"><b>First Image</b></td>
-         <td> <style="font-size:30px"><b>Second Image</b></td>
-         <td> <style="font-size:30px"><b>Cosine Similarity as per VGG16</b></td>
-         <td> <style="font-size:30px"><b>Cosine Similarity as per RESNET50</b></td>
-         <td> <style="font-size:30px"><b>Cosine Similarity as per Image GPT</b></td>
-         <td> <style="font-size:30px"><b>Hamming Distance(Hashing)</b></td>
+         <td> <style="font-size=20px"><b>Image Types</b></td>
+         <td> <style="font-size=20px"><b>First Image</b></td>
+         <td> <style="font-size=20px"><b>Second Image</b></td>
+         <td> <style="font-size=20px"><b>Cosine Similarity as per VGG16(thres>0.65)</b></td>
+         <td> <style="font-size=20px"><b>Cosine Similarity as per RESNET50</b></td>
+         <td> <style="font-size=20px"><b>Cosine Similarity as per Image GPT(thres>0.7)</b></td>
+         <td> <style="font-size:20px"><b>Hamming Distance(Hashing)(thres<=7)</b></td>
+         <td> <style="font-size:10px"><b>Conclusion</b></td>
          </tr>
         <tr>
-          <td>Same Type of Image</td>
-          <td> <img src="https://user-images.githubusercontent.com/74641501/216241682-1a9889ab-da67-4859-8722-f05ef92b4c21.PNG" alt="sm1" width = 100px height = 180px> </td>
-          <td> <img src="https://user-images.githubusercontent.com/74641501/216241934-77dc6a6c-b259-468d-91b6-3b516b22eb28.PNG" alt="sm2" width = 100px height = 180px> </td>
-          <td>0.4300912060694731</td>
+          <td>Same color Image with Different shape</td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216914826-be8d9edc-2313-46c9-a88e-85c6005ff5d1.PNG" alt="black_bottle_1" width = 100px height = 180px></td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216915218-13a5ef18-bb53-4f52-a14a-4766a126fb4b.PNG" alt="black_db1" width = 100px height = 90px></td>
+          <td>0.47053641080856323</td>
+          <td> 0.5432639122009277</td>
+          <td>0.6225253862131443</td> 
+          <td>3</td>
           <td> </td>
-          <td>0.811369137503929</td> 
          </tr> 
+          <tr>
+          <td>Same Type of Image</td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216912076-e3559ed8-3111-420c-9f5f-f386ecbe3a4f.PNG" alt="black_db1" width = 100px height = 90px></td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216912620-1c11a8ef-b8b4-44f8-ae17-e591ac03e68f.PNG" alt="black_db2" width = 100px height = 90px></td>
+          <td>0.771836519241333</td>
+          <td>0.8311712145805359</td>
+          <td>0.7098558201979741</td> 
+          <td>3</td>
+          <td> </td>
+         </tr> 
+        <tr>
+          <td>Different Images</td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216910078-4e5ff38c-1818-4f0d-860a-d23f49b175f9.PNG" alt="slik_1" width = 100px height = 180px></td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216910627-cdbc9013-4eb6-4177-8052-77fc548f9ed9.PNG" " alt="slik_2" width = 100px height = 180px></td>
+          <td>0.5643413662910461</td>
+          <td>0.6184300780296326</td>
+          <td>0.5387457407460456</td> 
+          <td>6</td>
+          <td> </td>
+         </tr> 
+        <tr>
+          <td>Same Product Image with different color</td>
+          <td><img src="https://user-images.githubusercontent.com/74641501/216919637-f14bf085-c1d2-450b-9c9d-11d6bbe2b72f.PNG" alt="green_slik" width = 100px height = 180px></td>
+          <td><img src="https://user-images.githubusercontent.com/74641501/216919818-65dc99a3-bf21-464d-9add-f1aaf0ca0e17.PNG" alt="blue_slik" width = 100px height = 180px></td>
+          <td>0.7121219635009766</td>
+          <td>0.8196262121200562</td>
+          <td>0.5975026223660531</td> 
+          <td> 8 </td>
+          <td> </td>
+         </tr>
    </table>
       
 # Steps Involved 

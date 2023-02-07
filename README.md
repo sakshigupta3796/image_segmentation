@@ -134,7 +134,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
    * **COLAB Notebook Link** : https://colab.research.google.com/drive/19mClPITMdZ_bXH7ha4wwlo1iTudrtfQP?usp=sharing  
             
 # Contributors: 
-     * Subham Sharma, Manish Kumar Yadav, Sakshi Gupta
+   * Subham Sharma, Manish Kumar Yadav, Sakshi Gupta
             
         
      

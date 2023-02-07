@@ -118,7 +118,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
   *  **CLusters with count**:
             
      <p align="center">
-       <img src= width = 800px height = 400px>
+       <img src="https://user-images.githubusercontent.com/108139646/217183661-50f70bb9-3ed5-4f2a-b7c3-486bf4ae4146.png" width = 180px height = 360px>
       </p>
             
 
@@ -130,4 +130,10 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
    * There are some rooms for the improvement in the performance of this capabilities.
    * Need to try different Image GPT version and observer which version gives best result on our problem. Please refer this link for different vesion of model : https://huggingface.co/models?pipeline_tag=image-classification&sort=downloads&search=google%2Fvit
 
-#
+# Code Link
+   * **COLAB Notebook Link** : https://colab.research.google.com/drive/19mClPITMdZ_bXH7ha4wwlo1iTudrtfQP?usp=sharing  
+            
+# Contributors: Subham Sharma, Manish Kumar Yadav, Sakshi Gupta
+            
+        
+     

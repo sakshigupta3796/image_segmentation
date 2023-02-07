@@ -48,7 +48,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
          <td> <style="font-size=20px"><b>Cosine Similarity as per RESNET50</b></td>
          <td> <style="font-size=20px"><b>Cosine Similarity as per Image GPT(thres>0.7)</b></td>
          <td> <style="font-size:20px"><b>Hamming Distance(Hashing)(thres<=7)</b></td>
-         <td> <style="font-size:40px"><b>Final Conclusion</b></td>
+         <td> <style="font-size:20px"><b>Final Conclusion on the basis of performance of differnet algorithms (VGG,RESNET50,IMAGE_GPT,IMAGE_HASHING) </b></td>
          </tr>
         <tr>
           <td>Same color Image with Different shape</td>
@@ -114,7 +114,9 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
           <td> <img src=https://user-images.githubusercontent.com/74641501/216232867-0cc57d00-ab77-47cb-8669-e977a0c40731.jpg alt="sm10" width = 480px height = 480px> </td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216233035-a478b5f7-0966-4c9a-8420-3369ef73110f.PNG" alt="sm20" width = 480px height = 480px> </td>
    </table>
-   * ** CLusters with count **:
+              
+  *  **CLusters with count**:
+            
      <p align="center">
        <img src= width = 800px height = 400px>
       </p>

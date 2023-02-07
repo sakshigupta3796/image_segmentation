@@ -48,7 +48,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
          <td> <style="font-size=20px"><b>Cosine Similarity as per RESNET50</b></td>
          <td> <style="font-size=20px"><b>Cosine Similarity as per Image GPT(thres>0.7)</b></td>
          <td> <style="font-size:20px"><b>Hamming Distance(Hashing)(thres<=7)</b></td>
-         <td> <style="font-size:10px"><b>Conclusion</b></td>
+         <td> <style="font-size:40px"><b>Final Conclusion</b></td>
          </tr>
         <tr>
           <td>Same color Image with Different shape</td>
@@ -58,7 +58,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
           <td> 0.5432639122009277</td>
           <td>0.6225253862131443</td> 
           <td>3</td>
-          <td> </td>
+          <td> In case of Same color Image with Different shape VGG is performing better than others  </td>
          </tr> 
           <tr>
           <td>Same Type of Image</td>
@@ -68,7 +68,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
           <td>0.8311712145805359</td>
           <td>0.7098558201979741</td> 
           <td>3</td>
-          <td> </td>
+          <td> In case of Same Type of Image all models are performing better</td>
          </tr> 
         <tr>
           <td>Different Images</td>
@@ -78,7 +78,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
           <td>0.6184300780296326</td>
           <td>0.5387457407460456</td> 
           <td>6</td>
-          <td> </td>
+          <td> In case of Different Images GPT and VGG is performing better than RESNET</td>
          </tr> 
         <tr>
           <td>Same Product Image with different color</td>
@@ -88,7 +88,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
           <td>0.8196262121200562</td>
           <td>0.5975026223660531</td> 
           <td> 8 </td>
-          <td> </td>
+          <td>In case of Same Product Image with different color GPT is performing best and RESNET is not up to the mark. And Hashing is playing important role in distinguish these two images (as Hashing is available in AND condition with thres<=7 so it will cluster these two in different groups even if VGG consine similarity is greater than threshold)</td>
          </tr>
    </table>
       
@@ -98,6 +98,12 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
 </p>
 
 # Application Demo
+   * **Home Page**: 
+     <p align="center">
+       <img src="https://user-images.githubusercontent.com/108139646/217169234-93f4858d-6bce-4aa2-89ed-62b9e313636f.jpg" width = 800px height = 400px>
+       </p>
+  *  **Input and Output Image**
+   
 
    <table>
         <tr>
@@ -108,6 +114,11 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
           <td> <img src=https://user-images.githubusercontent.com/74641501/216232867-0cc57d00-ab77-47cb-8669-e977a0c40731.jpg alt="sm10" width = 480px height = 480px> </td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216233035-a478b5f7-0966-4c9a-8420-3369ef73110f.PNG" alt="sm20" width = 480px height = 480px> </td>
    </table>
+   * ** CLusters with count **:
+     <p align="center">
+       <img src= width = 800px height = 400px>
+      </p>
+            
 
 # Limitation
    * Application performance depends on the quality of the input image.

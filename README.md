@@ -4,6 +4,14 @@ Table of Content
 - [SKU Object Detection and Matching on Planogram Image](#sku-object-detection-and-matching-on-planogram-image)
 - [Architectural Flow](#architectural-flow)
 - [Object Detetction](#object-detetction)
+- [Comparison Between Multiple Features Extraction Algorithms](#comparison-between-multiple-features-extraction-algorithms)
+- [Explorations](#explorations)
+- [Steps Involved](#steps-involved)
+- [Application Demo](#application-demo)
+- [Limitation](#limitation)
+- [Future Scope](#future-scope)
+- [Code Link](#code-link)
+- [Contributors](#contributors)
 
 # SKU Object Detection and Matching on Planogram Image 
 

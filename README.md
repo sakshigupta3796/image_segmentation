@@ -1,4 +1,9 @@
-<br/>
+Table of Content
+=============================
+
+- [SKU Object Detection and Matching on Planogram Image](#sku-object-detection-and-matching-on-planogram-image)
+- [Architectural Flow](#architectural-flow)
+- [Object Detetction](#object-detetction)
 
 # SKU Object Detection and Matching on Planogram Image 
 
@@ -28,7 +33,7 @@ Object detection is a computer vision technique for locating instances of object
  alt="sm20" width = 400px height = 400px> </td>
    </table>
    
-   ### **Object Detetction Performance Metrics**
+   ### **Object Detection Performance Metrics**
    <img src="https://user-images.githubusercontent.com/108139646/217748528-fb88d83d-871b-4ac0-bee0-5decf8002be0.png" width = 1200px height = 360px>
 
     

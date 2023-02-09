@@ -3,7 +3,7 @@ Table of Content
 
 - [SKU Object Detection and Matching on Planogram Image](#sku-object-detection-and-matching-on-planogram-image)
 - [Architectural Flow](#architectural-flow)
-- [Object Detetction](#object-detetction)
+- [Object Detection](#object-detection)
 - [Comparison Between Multiple Features Extraction Algorithms](#comparison-between-multiple-features-extraction-algorithms)
 - [Explorations](#explorations)
 - [Steps Involved](#steps-involved)
@@ -26,7 +26,7 @@ Table of Content
 2. **Features EXtraction:** At this stage, Image Features Extraction is performed using multiple alogorithms(like VGG16, Image GPT and Image Hashing) on the original and enhanced detected objects. 
 3. **Clusturing :** Last step is to implement the clustering algorithms on the extracted features using cosine similarity and hamming distance.
 
-# **Object Detetction**
+# **Object Detection**
 Object detection is a computer vision technique for locating instances of objects in images or videos. Object detection algorithms typically leverage machine learning or deep learning to produce meaningful results.
 
  <table>

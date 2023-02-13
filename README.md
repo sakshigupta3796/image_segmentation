@@ -53,19 +53,19 @@ Object detection is a computer vision technique for locating instances of object
          <td> <style="font-size=20px"><b>Image Types</b></td>
          <td> <style="font-size=20px"><b>First Image</b></td>
          <td> <style="font-size=20px"><b>Second Image</b></td>
-         <td> <style="font-size=20px"><b>Cosine Similarity as per VGG16(thres>0.65)</b></td>
-         <td> <style="font-size=20px"><b>Cosine Similarity as per RESNET50</b></td>
-         <td> <style="font-size=20px"><b>Cosine Similarity as per Image GPT(thres>0.7)</b></td>
-         <td> <style="font-size:20px"><b>Hamming Distance(Hashing)(thres<=7)</b></td>
+         <td> <style="font-size=20px"><b>VGG16 Cosine Similarity </b></td>
+         <td> <style="font-size=20px"><b>RESNET50 Cosine Similarity </b></td>
+         <td> <style="font-size=20px"><b>Image GPT Cosine Similarity </b></td>
+         <td> <style="font-size:20px"><b>Hamming Distance(Hashing)</b></td>
          <td> <style="font-size:20px"><b>Final Conclusion on the basis of performance of differnet algorithms (VGG,RESNET50,IMAGE_GPT,IMAGE_HASHING) </b></td>
          </tr>
           <tr>
           <td>Same Type of Image</td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216912076-e3559ed8-3111-420c-9f5f-f386ecbe3a4f.PNG" alt="black_db1" width = 100px height = 90px></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216912620-1c11a8ef-b8b4-44f8-ae17-e591ac03e68f.PNG" alt="black_db2" width = 100px height = 90px></td>
-          <td>0.771836519241333</td>
-          <td>0.8311712145805359</td>
-          <td>0.7098558201979741</td> 
+          <td>0.7718</td>
+          <td>0.8312</td>
+          <td>0.7099</td> 
           <td>3</td>
           <td> In case of Same Type of Image all models are performing better</td>
          </tr> 
@@ -73,9 +73,9 @@ Object detection is a computer vision technique for locating instances of object
           <td>Same color Image with Different shape</td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216914826-be8d9edc-2313-46c9-a88e-85c6005ff5d1.PNG" alt="black_bottle_1" width = 100px height = 180px></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216915218-13a5ef18-bb53-4f52-a14a-4766a126fb4b.PNG" alt="black_db1" width = 100px height = 90px></td>
-          <td>0.47053641080856323</td>
-          <td> 0.5432639122009277</td>
-          <td>0.6225253862131443</td> 
+          <td>0.4705</td>
+          <td> 0.5433</td>
+          <td>0.6225</td> 
           <td>3</td>
           <td> In case of Same color Image with Different shape VGG is performing better than others  </td>
          </tr> 
@@ -83,9 +83,9 @@ Object detection is a computer vision technique for locating instances of object
           <td>Different Images</td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216910078-4e5ff38c-1818-4f0d-860a-d23f49b175f9.PNG" alt="slik_1" width = 100px height = 180px></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216910627-cdbc9013-4eb6-4177-8052-77fc548f9ed9.PNG" " alt="slik_2" width = 100px height = 180px></td>
-          <td>0.5643413662910461</td>
-          <td>0.6184300780296326</td>
-          <td>0.5387457407460456</td> 
+          <td>0.5643</td>
+          <td>0.6184</td>
+          <td>0.5387</td> 
           <td>6</td>
           <td> In case of Different Images GPT and VGG is performing better than RESNET</td>
          </tr> 
@@ -93,9 +93,9 @@ Object detection is a computer vision technique for locating instances of object
           <td>Same Product Image with different color</td>
           <td><img src="https://user-images.githubusercontent.com/74641501/216919637-f14bf085-c1d2-450b-9c9d-11d6bbe2b72f.PNG" alt="green_slik" width = 100px height = 180px></td>
           <td><img src="https://user-images.githubusercontent.com/74641501/216919818-65dc99a3-bf21-464d-9add-f1aaf0ca0e17.PNG" alt="blue_slik" width = 100px height = 180px></td>
-          <td>0.7121219635009766</td>
-          <td>0.8196262121200562</td>
-          <td>0.5975026223660531</td> 
+          <td>0.7121</td>
+          <td>0.8196</td>
+          <td>0.5975</td> 
           <td> 8 </td>
           <td>In case of Same Product Image with different color GPT is performing best and RESNET is not up to the mark. And Hashing is playing important role in distinguish these two images (as Hashing is available in AND condition with thres<=7 so it will cluster these two in different groups even if VGG consine similarity is greater than threshold)</td>
          </tr>

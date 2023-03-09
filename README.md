@@ -31,8 +31,8 @@ Object detection is a computer vision technique for locating instances of object
 
  <table>
         <tr>
-         <td> <style="font-size:30px">Input Image</b></td>
-         <td> <style="font-size:30px">Output Image</b></td>
+         <td> <b><style="font-size:30px">Input Image</b></td>
+         <td> <b> <style="font-size:30px">Output Image</b></td>
          </tr>
         <tr>
           <td> <img src ="https://user-images.githubusercontent.com/108139646/217745255-a6930d7a-1bf6-4010-8699-477e3c3219f1.png"
@@ -42,31 +42,33 @@ Object detection is a computer vision technique for locating instances of object
    </table>
    
    ### **Object Detection Performance Metrics**
-    We have trained model on a set of 8232 images and tested on 1982 images.
+   We have trained model on a set of **8233** images and tested on **2941** images. Following are the observations :
    <table>
         <tr>
-         <td> <style="font-size:30px">Accuracy metrics</b></td>
-         <td> <style="font-size:30px">Value</b></td>
+         <td> <b><style="font-size:30px">Accuracy metrics</b></td>
+         <td> <b> <style="font-size:30px">Value</b></td>
          </tr>
         <tr>
-         <td> <style="font-size:30px">Precision</b></td>
-         <td> <style="font-size:30px">0.90</b></td>
+         <td> <b> <style="font-size:30px">Precision</b></td>
+         <td> <b> <style="font-size:30px">0.90</b></td>
         </tr>
          <tr>
-         <td> <style="font-size:30px">Recall</b></td>
-         <td> <style="font-size:30px">0.69</b></td>
+         <td>  <b> <style="font-size:30px">Recall</b></td>
+         <td>  <b> <style="font-size:30px">0.69</b></td>
         </tr>
          <tr>
-         <td> <style="font-size:30px">mAP</b></td>
-         <td> <style="font-size:30px">0.80</b></td>
+         <td> <b> <style="font-size:30px">mAP</b></td>
+         <td>  <b><style="font-size:30px">0.80</b></td>
         </tr>
           <tr>
-         <td> <style="font-size:30px">F1 score</b></td>
-         <td> <style="font-size:30px">0.72</b></td>
+         <td>  <b> <style="font-size:30px">F1 score</b></td>
+         <td>  <b> <style="font-size:30px">0.72</b></td>
         </tr>
    </table>
     
-    
+   **Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 9 epochs.
+# Clustering Accuracy :
+   
 # Comparison Between Multiple Features Extraction Algorithms: 
 * **Formula (based on testing of images on large sample)** : ``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``
 

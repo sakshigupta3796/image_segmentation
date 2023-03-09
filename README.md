@@ -45,9 +45,9 @@ Below image shows the example of Object Detection where the ``first image is an 
          </tr>
         <tr>
           <td> <img src ="https://user-images.githubusercontent.com/108139646/217745255-a6930d7a-1bf6-4010-8699-477e3c3219f1.png"
- alt="sm10" width = 400px height = 400px> </td>
+ alt="sm10" width = 600px height = 400px> </td>
           <td> <img src="https://user-images.githubusercontent.com/108139646/217744508-b6401726-2de5-449a-ac1f-e6e9ad91f29b.png"
- alt="sm20" width = 400px height = 400px> </td>
+ alt="sm20" width = 600px height = 400px> </td>
    </table>
    
    ### **Object Detection Performance Metrics**

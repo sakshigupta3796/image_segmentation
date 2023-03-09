@@ -42,8 +42,30 @@ Object detection is a computer vision technique for locating instances of object
    </table>
    
    ### **Object Detection Performance Metrics**
-   <img src="https://user-images.githubusercontent.com/108139646/217748528-fb88d83d-871b-4ac0-bee0-5decf8002be0.png" width = 1200px height = 360px>
-
+    We have trained model on a set of 8232 images and tested on 1982 images.
+   <table>
+        <tr>
+         <td> <style="font-size:30px">Accuracy metrics</b></td>
+         <td> <style="font-size:30px">Value</b></td>
+         </tr>
+        <tr>
+         <td> <style="font-size:30px">Precision</b></td>
+         <td> <style="font-size:30px">0.90</b></td>
+        </tr>
+         <tr>
+         <td> <style="font-size:30px">Recall</b></td>
+         <td> <style="font-size:30px">0.69</b></td>
+        </tr>
+         <tr>
+         <td> <style="font-size:30px">mAP</b></td>
+         <td> <style="font-size:30px">0.80</b></td>
+        </tr>
+          <tr>
+         <td> <style="font-size:30px">F1 score</b></td>
+         <td> <style="font-size:30px">0.72</b></td>
+        </tr>
+   </table>
+    
     
 # Comparison Between Multiple Features Extraction Algorithms: 
 * **Formula (based on testing of images on large sample)** : ``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``

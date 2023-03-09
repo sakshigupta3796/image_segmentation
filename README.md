@@ -5,7 +5,7 @@ Table of Content
 - [Architectural Flow](#architectural-flow)
 - [Object Detection](#object-detection)
 - [Object Detection Performance Metrics](#object-detection-performance-metrics)
-- [Comparison Between Multiple Features Extraction Algorithms](#comparison-between-multiple-features-extraction-algorithms)
+- [Features Extraction Algorithms Comparison](#features-extraction-algorithms-comparison)
 - [Explorations](#explorations)
 - [Steps Involved](#steps-involved)
 - [Application Demo](#application-demo)
@@ -28,7 +28,15 @@ Table of Content
 3. **Clusturing :** Last step is to implement the clustering algorithms on the extracted features using cosine similarity and hamming distance.
 
 # **Object Detection**
-Object detection is a computer vision technique for locating instances of objects in images or videos. Object detection algorithms typically leverage machine learning or deep learning to produce meaningful results.
+**Object detection** is a computer vision technique for locating instances of objects in images or videos. Object detection algorithms typically leverage machine learning or deep learning to produce meaningful results.
+
+In **Object Detection** we locate the presence of objects with a bounding box and types or classes of the located objects in an image.
+
+> **Input:** An image with one or more objects, such as a photograph.
+
+> **Output:** One or more bounding boxes (e.g. defined by a point, width, and height), and a class label for each bounding box.
+
+Below image shows the example of Object Detection where the ``first image is an input Planogram image`` & ``second image is an output Planogram image`` with the ``detected Bounding Boxes & their thresholds``.
 
  <table>
         <tr>
@@ -67,14 +75,18 @@ Object detection is a computer vision technique for locating instances of object
         </tr>
    </table>
     
-   **Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 9 epochs.
+   
+   ``**Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 9 epochs.``
+   
 # Clustering Accuracy :
    
-# Comparison Between Multiple Features Extraction Algorithms: 
-  We have calculated cosine similarity on features extracted using VGG16,Image GPT and calculated hamming distance from Image Hash and based on the formula mentioned below we have created clusters of similar objects.
+# Features Extraction Algorithms Comparison: 
+  We have calculated cosine similarity on features extracted using ``VGG16,Image GPT`` and calculated ``hamming distance`` from Image Hash and based on the formula mentioned below we have created clusters of similar objects.
 * **Formula (based on testing of images on large sample)** : ``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``
 
-Below table represents the different scenarios to compare two images considering (similar images, images with different shape, differnet images,same image with different color etc) while clustering and their respective Cosine Similarities(VGG16,RESNET,Image GPT) :
+Below table represents the different scenarios to compare two images considering (``similar images, images with different shape, differnet images,same image with different color etc``) while clustering and their respective Cosine Similarities(``VGG16,RESNET,Image GPT``) :
+
+
   <table>
         <tr>
          <td> <style="font-size=20px"><b>Image Types</b></td>
@@ -84,10 +96,10 @@ Below table represents the different scenarios to compare two images considering
          <td> <style="font-size=20px"><b>RESNET50 Cosine Similarity </b></td>
          <td> <style="font-size=20px"><b>Image GPT Cosine Similarity </b></td>
          <td> <style="font-size:20px"><b>Hamming Distance</b></td>
-         <td> <style="font-size:20px"><b>Final Conclusion on the basis of performance of differnet algorithms (VGG,RESNET50,IMAGE_GPT,IMAGE_HASHING) </b></td>
+         <td> <style="font-size:20px"><b>Final Conclusion</b></td>
          </tr>
           <tr>
-          <td>Same Type of Image</td>
+          <td><b>Same Type of Image</b></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216912076-e3559ed8-3111-420c-9f5f-f386ecbe3a4f.PNG" alt="black_db1" width = 100px height = 90px></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216912620-1c11a8ef-b8b4-44f8-ae17-e591ac03e68f.PNG" alt="black_db2" width = 100px height = 90px></td>
           <td>0.77</td>
@@ -97,17 +109,17 @@ Below table represents the different scenarios to compare two images considering
           <td> In case of Same Type of Image all models are performing better</td>
          </tr> 
           <tr>
-          <td>Same color Image with Different shape</td>
+          <td><b>Same color Image with Different shape</b></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216914826-be8d9edc-2313-46c9-a88e-85c6005ff5d1.PNG" alt="black_bottle_1" width = 100px height = 180px></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216915218-13a5ef18-bb53-4f52-a14a-4766a126fb4b.PNG" alt="black_db1" width = 100px height = 90px></td>
           <td>0.47</td>
           <td> 0.54</td>
           <td>0.62</td> 
           <td>3</td>
-          <td> In case of Same color Image with Different shape VGG is performing better than others  </td>
+          <td> In case of Same color Image with Different shape VGG is performing better than others </td>
          </tr> 
         <tr>
-          <td>Different Images</td>
+          <td><b>Different Images</b></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216910078-4e5ff38c-1818-4f0d-860a-d23f49b175f9.PNG" alt="slik_1" width = 100px height = 180px></td>
           <td> <img src="https://user-images.githubusercontent.com/74641501/216910627-cdbc9013-4eb6-4177-8052-77fc548f9ed9.PNG" " alt="slik_2" width = 100px height = 180px></td>
           <td>0.56</td>
@@ -117,7 +129,7 @@ Below table represents the different scenarios to compare two images considering
           <td> In case of Different Images GPT and VGG is performing better than RESNET</td>
          </tr> 
         <tr>
-          <td>Same Product Image with different color</td>
+          <td><b>Same Product Image with different color</b></td>
           <td><img src="https://user-images.githubusercontent.com/74641501/216919637-f14bf085-c1d2-450b-9c9d-11d6bbe2b72f.PNG" alt="green_slik" width = 100px height = 180px></td>
           <td><img src="https://user-images.githubusercontent.com/74641501/216919818-65dc99a3-bf21-464d-9add-f1aaf0ca0e17.PNG" alt="blue_slik" width = 100px height = 180px></td>
           <td>0.71</td>

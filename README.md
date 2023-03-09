@@ -73,7 +73,8 @@ Object detection is a computer vision technique for locating instances of object
 # Comparison Between Multiple Features Extraction Algorithms: 
   We have calculated cosine similarity on features extracted using VGG16,Image GPT and calculated hamming distance from Image Hash and based on the formula mentioned below we have created clusters of similar objects.
 * **Formula (based on testing of images on large sample)** : ``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``
-Below table represents the different scenarios to compare two images considering (similar images, images with different shape, differnet images,same image with different color etc) while clustering and their repective Cosine Similarities(VGG16,RESNET,IMage GPT) :
+
+Below table represents the different scenarios to compare two images considering (similar images, images with different shape, differnet images,same image with different color etc) while clustering and their respective Cosine Similarities(VGG16,RESNET,Image GPT) :
   <table>
         <tr>
          <td> <style="font-size=20px"><b>Image Types</b></td>

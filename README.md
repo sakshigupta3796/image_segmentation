@@ -194,18 +194,18 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
             
 
 # Limitation
-   * Application performance depends on the quality of the input image.
-   * Application had hard time in distingues to same colour product.
+   > * Application performance depends on the quality of the input image.
+   > * Application had hard time in distingues to same colour product.
 
 # Future Scope
-   * There are some rooms for the improvement in the performance of this capabilities.
-   * Need to try different Image GPT version and observer which version gives best result on our problem. Please refer this link for different vesion of model : https://huggingface.co/models?pipeline_tag=image-classification&sort=downloads&search=google%2Fvit
+   > * There are some rooms for the improvement in the performance of this capabilities.
+   > * Need to try different Image GPT version and observer which version gives best result on our problem. Please refer this link for different vesion of model : https://huggingface.co/models?pipeline_tag=image-classification&sort=downloads&search=google%2Fvit
 
 # Code Link
-   * **COLAB Notebook Link** : https://colab.research.google.com/drive/19mClPITMdZ_bXH7ha4wwlo1iTudrtfQP?usp=sharing  
+   > * **COLAB Notebook Link** : https://colab.research.google.com/drive/19mClPITMdZ_bXH7ha4wwlo1iTudrtfQP?usp=sharing  
             
 # Contributors: 
-   * Subham Sharma, Manish Kumar Yadav, Sakshi Gupta
+   > * ``Subham Kumar Sharma, Manish Kumar Yadav, Sakshi Gupta``
             
         
      

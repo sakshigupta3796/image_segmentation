@@ -189,7 +189,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
   *  **Clusters with count**:
             
      <p align="center">
-       <img src="https://user-images.githubusercontent.com/108139646/217183661-50f70bb9-3ed5-4f2a-b7c3-486bf4ae4146.png" width = 180px height = 360px>
+       <img src="https://user-images.githubusercontent.com/59251032/224084389-72259c44-c5d3-4309-8a2b-e926044a6b84.png" width = 180px height = 360px>
       </p>
             
 

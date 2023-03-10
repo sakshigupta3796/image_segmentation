@@ -76,7 +76,7 @@ Below image shows the example of Object Detection where the ``first image is an 
    </table>
     
    
-   ``**Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 9 epochs.``
+   ``**Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 20 epochs.``
    
 # Clustering Accuracy :
    

@@ -79,6 +79,46 @@ Below image shows the example of Object Detection where the ``first image is an 
    ``**Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 20 epochs.``
    
 # Clustering Accuracy :
+   We have claculated clustering accuracy on a set of clustered images using following matrix:
+   - ``Rand Index (Random Score)``: The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that        are assigned in the same or different clusters in the predicted and true clusterings.
+      
+       RI = (number of agreeing pairs) / (number of pairs)
+      
+   - `` Adjusted Rand Index``: The adjusted Rand index is ensured to have a value close to 0.0 for random labeling independently of the number of clusters and               samples and exactly 1.0 when the clusterings are identical (up to a permutation). The adjusted Rand index is bounded below by -0.5 for especially discordant         clusterings.
+
+        ARI = (RI - Expected_RI) / (max(RI) - Expected_RI)
+     
+  - `` V-measure Score``: The V-measure is the harmonic mean between homogeneity and completeness.
+  
+       v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)      
+   
+  - ``Fowlkes-Mallows Score``:The Fowlkes-Mallows function measures the similarity of two clustering of a set of points. It may be defined as the geometric mean of         the pairwise precision and recall.
+     
+      FMS=TP/sqrt((TP+FP)(TP+FN))
+      
+      
+     <table>
+        <tr>
+         <td> <b><style="font-size:30px">Accuracy metrics</b></td>
+         <td> <b> <style="font-size:30px">Value</b></td>
+         </tr>
+        <tr>
+         <td> <b> <style="font-size:30px">Rand Index</b></td>
+         <td> <b> <style="font-size:30px">0.82</b></td>
+        </tr>
+         <tr>
+         <td>  <b> <style="font-size:30px">Adjusted Rand Index</b></td>
+         <td>  <b> <style="font-size:30px">0.57</b></td>
+        </tr>
+         <tr>
+         <td> <b> <style="font-size:30px">V-measure Score</b></td>
+         <td>  <b><style="font-size:30px">0.82</b></td>
+        </tr>
+          <tr>
+         <td>  <b> <style="font-size:30px">Fowlkes-Mallows Score</b></td>
+         <td>  <b> <style="font-size:30px">0.71</b></td>
+        </tr>
+   </table>
    
 # Features Extraction Algorithms Comparison: 
   We have calculated cosine similarity on features extracted using ``VGG16,Image GPT`` and calculated ``hamming distance`` from Image Hash and based on the formula mentioned below we have created clusters of similar objects.
@@ -183,7 +223,7 @@ E.g. K-Means (distance between points), Affinity propagation (graph distance), M
          </tr>
         <tr>
           <td> <img src=https://user-images.githubusercontent.com/74641501/216232867-0cc57d00-ab77-47cb-8669-e977a0c40731.jpg alt="sm10" width = 480px height = 480px> </td>
-          <td> <img src="https://user-images.githubusercontent.com/74641501/216233035-a478b5f7-0966-4c9a-8420-3369ef73110f.PNG" alt="sm20" width = 480px height = 480px> </td>
+          <td> <img src="https://user-images.githubusercontent.com/74641501/216233035-a478b5f7-0966-4c9a-8420-3369ef73110f.PNG" alt="sm20" width = 480px height = 480px> </td></tr>
    </table>
               
   *  **Clusters with count**:

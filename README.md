@@ -105,21 +105,21 @@ Below image shows the example of Object Detection where the ``first image is an 
         </tr>
    </table>
   
-   - ``Rand Index (Random Score)``: The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that        are assigned in the same or different clusters in the predicted and true clusterings.
+   - **Rand Index (Random Score):** The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that        are assigned in the same or different clusters in the predicted and true clusterings.
       
-       RI = (number of agreeing pairs) / (number of pairs)
+       ``RI = (number of agreeing pairs) / (number of pairs)``
       
-   - `` Adjusted Rand Index``: The adjusted Rand index is ensured to have a value close to 0.0 for random labeling independently of the number of clusters and               samples and exactly 1.0 when the clusterings are identical (up to a permutation). The adjusted Rand index is bounded below by -0.5 for especially discordant         clusterings.
+   - **Adjusted Rand Index:** The adjusted Rand index is ensured to have a value close to 0.0 for random labeling independently of the number of clusters and               samples and exactly 1.0 when the clusterings are identical (up to a permutation). The adjusted Rand index is bounded below by -0.5 for especially discordant         clusterings.
 
-        ARI = (RI - Expected_RI) / (max(RI) - Expected_RI)
+        ``ARI = (RI - Expected_RI) / (max(RI) - Expected_RI)``
      
-  - `` V-measure Score``: The V-measure is the harmonic mean between homogeneity and completeness.
+  - **V-measure Score:** The V-measure is the harmonic mean between homogeneity and completeness.
   
-       v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)      
+       ``v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)``      
    
-  - ``Fowlkes-Mallows Score``:The Fowlkes-Mallows function measures the similarity of two clustering of a set of points. It may be defined as the geometric mean of         the pairwise precision and recall.
+  - **Fowlkes-Mallows Score:** The Fowlkes-Mallows function measures the similarity of two clustering of a set of points. It may be defined as the geometric mean of         the pairwise precision and recall.
      
-      FMS=TP/sqrt((TP+FP)(TP+FN))
+      ``FMS=TP/sqrt((TP+FP)(TP+FN))``
       
       
    

@@ -5,6 +5,7 @@ Table of Content
 - [Architectural Flow](#architectural-flow)
 - [Object Detection](#object-detection)
 - [Object Detection Performance Metrics](#object-detection-performance-metrics)
+- [Clustering Accuracy](#clustering-accuracy)
 - [Features Extraction Algorithms Comparison](#features-extraction-algorithms-comparison)
 - [Explorations](#explorations)
 - [Steps Involved](#steps-involved)

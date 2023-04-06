@@ -3,7 +3,7 @@ Table of Content
 
 - [SKU Object Detection and Matching on Planogram Image](#sku-object-detection-and-matching-on-planogram-image)
 - [Architectural Flow](#architectural-flow)
-- [Object Detection](#object-detection)
+- [SKU Detection](#sku-detection)
 - [Object Detection Performance Metrics](#object-detection-performance-metrics)
 - [Clustering Accuracy](#clustering-accuracy)
 - [Features Extraction Algorithms Comparison](#features-extraction-algorithms-comparison)

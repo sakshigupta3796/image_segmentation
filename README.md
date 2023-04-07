@@ -80,13 +80,15 @@ Below image shows the example of SKU Object Detection where the ``first image is
    
 # **SKU Identification and Matching** 
 
-In SKU Identification and Matching we perfrom the grouping of similar SKUs using multiple feature extraction algorithms. The generated score based on threshold will be considered for grouping similar SKUs.
+In SKU Identification and Matching we perfrom the grouping of similar SKUs using multiple feature extraction algorithms. The generated score based on threshold will be considered for grouping similar SKU's.
 
 In feature extraction we have used following Algorithms:
-``VGG16``-
-``ImageGPT``-
-``ImageHash``- and clustered them using cosine similarity on extracted features to get clusters of the similar objects.
- As a part of SKU idetification we perfrom
+- ``VGG16``
+- ``ImageGPT``
+- ``ImageHash``
+
+Once we have the score from multiple feature algorithms we compute cosine similarity to get clusters of the similar SKU's.
+The process flow for the feature extraction & similarity scores calculation is represented using the diagram shown below. 
 
 <p align="center">
 <img width="771" alt="steps11" src="https://user-images.githubusercontent.com/74641501/216269200-06e3bf3b-13e1-4e09-a58b-dfbb69361378.PNG">

@@ -31,13 +31,13 @@ Table of Content
 # **SKU Detection**
 **Object detection** is a computer vision technique for locating instances of objects in images or videos. Object detection algorithms typically leverage machine learning or deep learning to produce meaningful results.
 
-In **Object Detection** we locate the presence of objects with a bounding box and types or classes of the located objects in an image.
+In ** SKU Object Detection** we locate the presence of objects with a bounding box and types or classes of the located objects in an SKU image.
 
-> **Input:** An image with one or more objects, such as a photograph.
+> **Input:** An SKU image with one or more objects, such as a photograph.
 
 > **Output:** One or more bounding boxes (e.g. defined by a point, width, and height), and a class label for each bounding box.
 
-Below image shows the example of Object Detection where the ``first image is an input Planogram image`` & ``second image is an output Planogram image`` with the ``detected Bounding Boxes & their thresholds``.
+Below image shows the example of SKU Object Detection where the ``first image is an input Planogram image`` & ``second image is an output Planogram image`` with the ``detected Bounding Boxes & their thresholds``.
 
  <table>
         <tr>

@@ -4,7 +4,7 @@ Table of Content
 - [SKU Object Detection and Matching on Planogram Image](#sku-object-detection-and-matching-on-planogram-image)
 - [Architectural Flow](#architectural-flow)
 - [SKU Detection](#sku-detection)
-- [Object Detection Performance Metrics](#object-detection-performance-metrics)
+- [SKU Detection Performance Metrics](#sku-detection-performance-metrics)
 - [Clustering Accuracy](#clustering-accuracy)
 - [Features Extraction Algorithms Comparison](#features-extraction-algorithms-comparison)
 - [Explorations](#explorations)
@@ -28,7 +28,7 @@ Table of Content
 2. **Features Extraction:** At this stage, Image Features Extraction is performed using multiple alogorithms(like VGG16, Image GPT and Image Hashing) on the original and enhanced detected objects. 
 3. **Clusturing :** Last step is to implement the clustering algorithms on the extracted features using cosine similarity and hamming distance.
 
-# **SKU Detection**
+# SKU Detection
 
 In **SKU Detection** we perform object detection by locating the presence of objects with a bounding box and types or classes of the located objects in an image.
 
@@ -93,53 +93,16 @@ The process flow for the feature extraction & similarity scores calculation is r
 <p align="center">
 <img width="771" alt="steps11" src="https://user-images.githubusercontent.com/74641501/216269200-06e3bf3b-13e1-4e09-a58b-dfbb69361378.PNG">
 </p>
-   
-# **Clustering Accuracy** 
-   We have calculated clustering accuracy on a set of clustered images using following matrix:
-   
-   <table>
-        <tr>
-         <td> <b><style="font-size:30px">Accuracy metrics</b></td>
-         <td> <b> <style="font-size:30px">Value</b></td>
-         </tr>
-        <tr>
-         <td> <b> <style="font-size:30px">Rand Index</b></td>
-         <td> <b> <style="font-size:30px">0.82</b></td>
-        </tr>
-         <tr>
-         <td>  <b> <style="font-size:30px">Adjusted Rand Index</b></td>
-         <td>  <b> <style="font-size:30px">0.57</b></td>
-        </tr>
-         <tr>
-         <td> <b> <style="font-size:30px">V-measure Score</b></td>
-         <td>  <b><style="font-size:30px">0.82</b></td>
-        </tr>
-          <tr>
-         <td>  <b> <style="font-size:30px">Fowlkes-Mallows Score</b></td>
-         <td>  <b> <style="font-size:30px">0.71</b></td>
-        </tr>
-   </table>
-  
-   - **Rand Index (Random Score):** The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that        are assigned in the same or different clusters in the predicted and true clusterings.
-      
-       ``RI = (number of agreeing pairs) / (number of pairs)``
-      
-   - **Adjusted Rand Index:** The adjusted Rand index is ensured to have a value close to 0.0 for random labeling independently of the number of clusters and               samples and exactly 1.0 when the clusterings are identical (up to a permutation). The adjusted Rand index is bounded below by -0.5 for especially discordant         clusterings.
+ 
+**``Similar SKU's are marked with same colour bounding box. Below figure shows the SKU's grouping.``**
 
-        ``ARI = (RI - Expected_RI) / (max(RI) - Expected_RI)``
-     
-  - **V-measure Score:** The V-measure is the harmonic mean between homogeneity and completeness.
-  
-       ``v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)``      
-   
-  - **Fowlkes-Mallows Score:** The Fowlkes-Mallows function measures the similarity of two clustering of a set of points. It may be defined as the geometric mean of         the pairwise precision and recall.
-     
-      ``FMS=TP/sqrt((TP+FP)(TP+FN))``
-      
-      
-   
-# Features Extraction Algorithms Comparison: 
-  We have calculated cosine similarity on features extracted using ``VGG16,Image GPT`` and calculated ``hamming distance`` from Image Hash and based on the formula mentioned below we have created clusters of similar objects.
+<p align="center">
+<img width="771" height="600" alt="test_1023_edited (1)" src="https://user-images.githubusercontent.com/59251032/230559394-6eff3fd7-ab5e-49d4-95b0-4a46511b2dff.png">
+
+</p>
+
+Groupings of similar SKU's is done combining the Threshold scores of multiple feature extraction algorithm. The formula to consider grouping is shwon below:
+
 * **Formula (based on testing of images on large sample)** : ``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``
 
 Below table represents the different scenarios to compare two images considering (``similar images, images with different shape, differnet images,same image with different color etc``) while clustering and their respective Cosine Similarities(``VGG16,RESNET,Image GPT``) :
@@ -197,6 +160,34 @@ Below table represents the different scenarios to compare two images considering
           <td>In case of Same Product Image with different color GPT is performing best and RESNET is not up to the mark. And Hashing is playing important role in distinguish these two images (as Hashing is available in AND condition with thres<=7 so it will cluster these two in different groups even if VGG consine similarity is greater than threshold)</td>
          </tr>
    </table>
+
+# **Clustering Accuracy** 
+   We have calculated clustering accuracy on a set of clustered images using following matrix:
+   
+   <table>
+        <tr>
+         <td> <b><style="font-size:30px">Accuracy metrics</b></td>
+         <td> <b> <style="font-size:30px">Value</b></td>
+         </tr>
+        <tr>
+         <td> <b> <style="font-size:30px">Rand Index</b></td>
+         <td> <b> <style="font-size:30px">0.82</b></td>
+        </tr>
+         <tr>
+         <td> <b> <style="font-size:30px">V-measure Score</b></td>
+         <td>  <b><style="font-size:30px">0.82</b></td>
+        </tr>
+          
+   </table>
+  
+   - **Rand Index (Random Score):** The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that        are assigned in the same or different clusters in the predicted and true clusterings.
+      
+       ``RI = (number of agreeing pairs) / (number of pairs)``
+     
+  - **V-measure Score:** The V-measure is the harmonic mean between homogeneity and completeness.
+  
+       ``v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)``      
+      
             
 # Explorations
 ### Possible Approaches at each stage

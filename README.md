@@ -29,11 +29,10 @@ Table of Content
 3. **Clusturing :** Last step is to implement the clustering algorithms on the extracted features using cosine similarity and hamming distance.
 
 # **SKU Detection**
-**Object detection** is a computer vision technique for locating instances of objects in images or videos. Object detection algorithms typically leverage machine learning or deep learning to produce meaningful results.
 
-In **SKU Object Detection** we locate the presence of objects with a bounding box and types or classes of the located objects in an SKU image.
+In **SKU Detection** we perform object detection by locating the presence of objects with a bounding box and types or classes of the located objects in an image.
 
-> **Input:** An SKU image with one or more objects, such as a photograph.
+> **Input:** A planogram image with multiple SKUs.
 
 > **Output:** One or more bounding boxes (e.g. defined by a point, width, and height), and a class label for each bounding box.
 
@@ -51,7 +50,7 @@ Below image shows the example of SKU Object Detection where the ``first image is
  alt="sm20" width = 600px height = 400px> </td>
    </table>
    
-   ### **Object Detection Performance Metrics**
+   ### **SKU Detection Performance Metrics**
    We have trained model on a set of **8233** images and tested on **2941** images. Following are the observations :
    <table>
         <tr>
@@ -79,7 +78,19 @@ Below image shows the example of SKU Object Detection where the ``first image is
    
    ``**Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 20 epochs.``
    
-   After SKU object Detection we perform feature extraction using VGG16 , ImageGPT , ImageHash and clustering using cosine similarity on extracted features to get clusters of the similar objects.
+# **SKU Identification and Matching** 
+
+In SKU Identification and Matching we perfrom the grouping of similar SKUs using multiple feature extraction algorithms. The generated score based on threshold will be considered for grouping similar SKUs.
+
+In feature extraction we have used following Algorithms:
+``VGG16``-
+``ImageGPT``-
+``ImageHash``- and clustered them using cosine similarity on extracted features to get clusters of the similar objects.
+ As a part of SKU idetification we perfrom
+
+<p align="center">
+<img width="771" alt="steps11" src="https://user-images.githubusercontent.com/74641501/216269200-06e3bf3b-13e1-4e09-a58b-dfbb69361378.PNG">
+</p>
    
 # **Clustering Accuracy** 
    We have calculated clustering accuracy on a set of clustered images using following matrix:
@@ -208,11 +219,6 @@ Below table represents the different scenarios to compare two images considering
 E.g. K-Means (distance between points), Affinity propagation (graph distance), Mean-shift (distance between points), DBSCAN (distance between nearest points), Gaussian mixtures (Mahalanobis distance to centers), Spectral clustering (graph distance) etc. Fundamentally, all clustering methods use the same approach i.e. first we calculate similarities and then we use it to cluster the data points into groups or batches. Here we will focus on Density-based spatial clustering of applications with noise (DBSCAN) clustering method.  Please refer this link for more details : https://www.analyticsvidhya.com/blog/2020/09/how-dbscan-clustering-works/
     * **COSINE SIMILARITY:** Cosine similarity is a metric, helpful in determining, how similar the data objects are irrespective of their size. We can measure the similarity between two sentences in Python using Cosine Similarity. In cosine similarity, data objects in a dataset are treated as a vector. The formula to find the cosine similarity between two vectors is – Cos(x, y) = x . y / ||x|| * ||y||   
             
-# Steps Involved 
-<p align="center">
-<img width="771" alt="steps11" src="https://user-images.githubusercontent.com/74641501/216269200-06e3bf3b-13e1-4e09-a58b-dfbb69361378.PNG">
-</p>
-
 # Application Demo
    * **Home Page**: 
      <p align="center">

@@ -79,7 +79,7 @@ Below image shows the example of SKU Object Detection where the ``first image is
    
    ``**Note**: Accuracy metrics can be improved if we train model on more number of images and for more number of epochs. Currently the object detection model is trained on 20 epochs.``
    
-   After SKU object Detection we perform feature extraction using VGG16 , RESNET , ImageHash and clustering using cosine similarity on extracted features to get clusters of the similar objects.
+   After SKU object Detection we perform feature extraction using VGG16 , ImageGPT , ImageHash and clustering using cosine similarity on extracted features to get clusters of the similar objects.
    
 # **Clustering Accuracy** 
    We have calculated clustering accuracy on a set of clustered images using following matrix:

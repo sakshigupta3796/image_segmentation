@@ -97,15 +97,20 @@ The process flow for the feature extraction & similarity scores calculation is r
 **``Similar SKU's are marked with same colour bounding box. Below figure shows the SKU's grouping.``**
 
 <p align="center">
-<img width="771" height="600" alt="test_1023_edited (1)" src="https://user-images.githubusercontent.com/59251032/230559394-6eff3fd7-ab5e-49d4-95b0-4a46511b2dff.png">
+<img width="771" height="600" alt="test_1023_edited (2)" src="https://user-images.githubusercontent.com/59251032/230563155-2f50dc22-7343-400f-90cf-4134035e0df2.png">
 
 </p>
 
 Groupings of similar SKU's is done combining the Threshold scores of multiple feature extraction algorithm. The formula to consider grouping is shwon below:
 
-* **Formula (based on testing of images on large sample)** : ``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``
+* **Formula (based on testing of images on large sample)** : 
 
-Below table represents the different scenarios to compare two images considering (``similar images, images with different shape, differnet images,same image with different color etc``) while clustering and their respective Cosine Similarities(``VGG16,RESNET,Image GPT``) :
+``similarity_GPT_org>0.65 or similarity_VGG_org>0.7 or similarity_GPT_filter >0.65 or similarity_VGG_filter>0.75 ) and similarity_hash<=7 ``
+
+Below table represents the different scenarios to compare two images:
+- ``similar images``
+- ``Images with different shape``
+- `` Differnet images,same image with different color etc``
 
 
   <table>
@@ -161,9 +166,18 @@ Below table represents the different scenarios to compare two images considering
          </tr>
    </table>
 
-# **Clustering Accuracy** 
-   We have calculated clustering accuracy on a set of clustered images using following matrix:
-   
+
+
+In order to test the accuracy of how good the algorithm is working in identifying the similar SKU's we have calculated the clustering accuracy. We have the predictions of SKU's Labels and the Ground truth Lables. Below are the metrics that we have used to calculate the accuracy:
+     
+- **Rand Index (Random Score):** The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that are assigned in the same or different clusters in the predicted and true clusterings.
+ ``RI = (number of agreeing pairs) / (number of pairs)``
+     
+- **V-measure Score:** The V-measure is the harmonic mean between homogeneity and completeness.
+ ``v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)``  
+
+**Clustering Accuracy**
+           
    <table>
         <tr>
          <td> <b><style="font-size:30px">Accuracy metrics</b></td>
@@ -180,13 +194,7 @@ Below table represents the different scenarios to compare two images considering
           
    </table>
   
-   - **Rand Index (Random Score):** The Rand Index computes a similarity measure between two clusterings by considering all pairs of samples and counting pairs that        are assigned in the same or different clusters in the predicted and true clusterings.
-      
-       ``RI = (number of agreeing pairs) / (number of pairs)``
-     
-  - **V-measure Score:** The V-measure is the harmonic mean between homogeneity and completeness.
-  
-       ``v = (1 + beta) * homogeneity * completeness / (beta * homogeneity + completeness)``      
+       
       
             
 # Explorations

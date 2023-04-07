@@ -5,10 +5,8 @@ Table of Content
 - [Architectural Flow](#architectural-flow)
 - [SKU Detection](#sku-detection)
 - [SKU Detection Performance Metrics](#sku-detection-performance-metrics)
-- [Clustering Accuracy](#clustering-accuracy)
-- [Features Extraction Algorithms Comparison](#features-extraction-algorithms-comparison)
+- [SKU Identification and Matching](#sku-identification-and-matching)
 - [Explorations](#explorations)
-- [Steps Involved](#steps-involved)
 - [Application Demo](#application-demo)
 - [Limitation](#limitation)
 - [Future Scope](#future-scope)
@@ -101,7 +99,7 @@ The process flow for the feature extraction & similarity scores calculation is r
 
 </p>
 
-Groupings of similar SKU's is done combining the Threshold scores of multiple feature extraction algorithm. The formula to consider grouping is shwon below:
+Groupings of similar SKU's is done combining the Threshold scores of multiple feature extraction algorithm. The formula to consider grouping is shown below:
 
 * **Formula (based on testing of images on large sample)** : 
 
